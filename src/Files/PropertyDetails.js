@@ -23,7 +23,7 @@ const PropertyDetails = () => {
           <h3 className='text-lg mb-4'>{property.address}</h3>
         </div>
         <div className='mb-4 lg:mb-0 flex gap-x-2 text-sm'>
-          <div className='bg-green-500 rounded-full text-white px-3 inline-block'>
+          <div className='bg-black rounded-full text-white px-3 inline-block'>
             {property.type}
           </div>
           <div className='bg-violet-500 rounded-full text-white px-3 inline-block'>
@@ -91,13 +91,10 @@ const PropertyDetails = () => {
             />
             <div className='flex gap-x-2'>
               <button
-                className='bg-violet-700 hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition'
+                className='bg-black hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition'
                 type='submit'
               >
                 Send message
-              </button>
-              <button className='border border-violet-700 text-violet-700 hover:border-purple-600 hover:text-purple-600 rounded p-4 text-sm w-full transition'>
-                Call
               </button>
             </div>
           </form>

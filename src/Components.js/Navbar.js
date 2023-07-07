@@ -9,7 +9,7 @@
      <nav>
         <a href='#' className='logo'>
         <Link to='/'>
-           <img src={logo} alt='' />
+           <h1 className='text-2xl lg:text-[28px] font-semibold leading-none mb-4 mt-8 ml-[-25px]'>Aadya Ventures.</h1>
          </Link>
         </a>
          <input className='menu-btn' type='checkbox' id='menu-btn'></input>

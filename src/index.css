@@ -115,7 +115,8 @@ color:#242424;
 }
 
 nav ul li a:hover{
-background-color: #f526cf;
+background-color: violet;
+
   color:#FFFFFF;
 box-shadow: 5px 10px 30px rgba(64, 149, 198, 0.411);
 transition: all ease 0.2s;
