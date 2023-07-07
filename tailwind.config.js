@@ -6,8 +6,8 @@
     },
     container: {
       padding: {
-        DEFAULT: '1rem',
-        lg: '2rem',
+        DEFAULT: '10rem',
+        lg: '6rem',
       },
     },
     screens: {

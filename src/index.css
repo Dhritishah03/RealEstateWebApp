@@ -26,6 +26,8 @@
 
 body {
   margin: 0;
+  
+  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -86,14 +88,13 @@ input{
 
 } */
 nav{
+  margin-right: -40px;
+  margin-left: -40px;
 display: flex;
 justify-content: space-around;
 align-items: center;
-left: 0;
-top: 0;
-width:100%;
-z-index: 1;
 background-color: #FFFFFF;
+box-shadow: 5px 10px 30px rgba(104, 184, 230, 0.411);
 }
 nav ul{
 display: flex;
@@ -115,9 +116,9 @@ color:#242424;
 }
 
 nav ul li a:hover{
-background-color: violet;
+background-color: #69A1BE;
 
-  color:#FFFFFF;
+color:white;
 box-shadow: 5px 10px 30px rgba(64, 149, 198, 0.411);
 transition: all ease 0.2s;
 }
