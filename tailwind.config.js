@@ -17,6 +17,18 @@
       xl: '1234px',
     },
     extend: {
+      animation: {
+        fade: 'fadeOut 5s ease-in-out',
+      },
+
+      // that is actual animation
+      keyframes: theme => ({
+        fadeOut: {
+          '0%': { backgroundColorColor: theme('colors.red.300') },
+          '100%': { backgroundColor: theme('colors.transparent') },
+        },
+      }),
+      
       colors: {
         primary: '#101828',
         secondary: '#7F56D9',
