@@ -27,7 +27,7 @@ const HouseList = () => {
 
   return (
     <section className='mt-[30px] mb-20'>
-      <h1 className='drop-shadow-xl shadow-black text-transparent bg-clip-text bg-gradient-to-r to-cyan-900 from-sky-400 pb-[20px] pt-[20px] ml-[500px] mr-[500px] text-cyan-700 text-5xl font-extrabold text-center mb-[60px]'>Our Properties</h1>
+      <h1 className='drop-shadow-xl shadow-black text-transparent bg-clip-text bg-gradient-to-r to-cyan-900 from-sky-400 pb-[20px] pt-[20px] ml-[500px] mr-[500px] text-5xl font-extrabold text-center mb-[60px]'>Our Properties</h1>
       <div className='container mx-auto'>
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-14'>
           {houses.map((house, index) => {
