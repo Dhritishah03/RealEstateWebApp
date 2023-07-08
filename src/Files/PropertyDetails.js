@@ -26,7 +26,7 @@ const PropertyDetails = () => {
           <div className='bg-black rounded-full text-white px-3 inline-block'>
             {property.type}
           </div>
-          <div className='bg-violet-500 rounded-full text-white px-3 inline-block'>
+          <div className='bg-slate-200 rounded-full text-black font-semibold px-3 inline-block'>
             {property.country}
           </div>
         </div>

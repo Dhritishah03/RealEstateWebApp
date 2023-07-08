@@ -1,5 +1,4 @@
 import React from 'react';
-
 import a from '../images/a.jpeg'
 import b from '../images/b.jpeg'
 import c from '../images/d.avif'
@@ -20,7 +19,7 @@ const Poster = () => {
           <img src={Image} alt='' />
         </div>
       </div>
-     
+      
     </section>
   );
 };
