@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-
+import { db } from './firebaseConfig';
 import Home from './Files/Home';
 import Header from './Components.js/Header';
 import PropertyDetails from './Files/PropertyDetails';

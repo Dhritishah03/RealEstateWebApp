@@ -1,4 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { db  } from '../firebaseConfig';
+import { collection, getDocs  } from 'firebase/firestore';
 
 import { HouseContext } from './HouseContext';
 
@@ -9,13 +11,28 @@ import { Link } from 'react-router-dom';
 import { ImSpinner2 } from 'react-icons/im';
 
 const HouseList = () => {
-  const { houses, loading } = useContext(HouseContext);
+  //const { houses, loading } = useContext(HouseContext);
+  const [houses, setHouses]= useState([]);
+  const housesCollectionRef = collection(db, "PropertyRecord");
 
-  if (loading) {
-    return (
-      <ImSpinner2 className='mx-auto animate-spin text-violet-700 text-4xl mt-[200px]' />
-    );
-  }
+  useEffect(() => {
+    const getHouses = async () => {
+      const querySnapshot = await getDocs(housesCollectionRef);
+      const housesData = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setHouses(housesData);
+    };
+  
+    getHouses();
+  }, []);
+  
+  
+
+
+  // if (loading) {
+  //   return (
+  //     <ImSpinner2 className='mx-auto animate-spin text-violet-700 text-4xl mt-[200px]' />
+  //   );
+  // }
 
   if (houses.length < 1) {
     return (
@@ -24,6 +41,8 @@ const HouseList = () => {
       </div>
     );
   }
+  
+  
 
   return (
     <section className='mt-[30px] mb-20'>

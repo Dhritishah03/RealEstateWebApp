@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 
-
+import { db } from '../firebaseConfig';
+import { Collection } from 'firebase/firestore';
 import { RenthouseData } from '../data';
 
 
