@@ -1,7 +1,7 @@
  import React from 'react'
- import logo from '../images/logo.webp'
+ 
  import { Link } from 'react-router-dom';
- import './style.css';
+
 
 
  export default function Navbar() {
