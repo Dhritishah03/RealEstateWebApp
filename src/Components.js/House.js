@@ -24,9 +24,9 @@ const House = ({ house }) => {
           <div className='text-base'>{house.area}</div>
         </div>
       </div>
-      <div className='text-lg font-semibold text-cyan-600 mb-4'>
+      {/* <div className='text-lg font-semibold text-cyan-600 mb-4'>
         $ {house.price}
-      </div>
+      </div> */}
     </div>
   );
 };

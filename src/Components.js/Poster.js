@@ -5,7 +5,7 @@ import c from '../images/d.avif'
 import './poster.jpg'
 const Poster = () => {
   return (
-    <section className=' bg-[url(https://wallpaperaccess.com/full/1191995.jpg)] bg-cover mt-[-80px] ml-[-40px] mr-[-40px] h-full min-h-[1040px] pt-[50px] mb-8 xl:mb-8'>
+    <section className=' bg-[url(https://wallpaperaccess.com/full/1191995.jpg)] bg-cover h-full min-h-[1040px] pt-[50px] mb-8 xl:mb-8'>
       <div>
         <div className='lg:ml-8 xl:ml-[135px]  items-center lg:items-start text-center lg:text-center justify-center flex-1 px-4 lg:px-0'>
           <h1 className='text-white mt-[150px] ml-[-80px] text-4xl lg:text-[58px] font-semibold leading-none '>

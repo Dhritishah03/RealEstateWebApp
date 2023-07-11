@@ -11,7 +11,7 @@ import Footer from './Components.js/Footer';
 
 function App() {
   return (
-    <div className='max-w-[1440px] h-12 mx-auto bg-white'>
+    <div className='h-12 mx-auto bg-white'>
     <Header />
     <Routes>
       <Route path='/' element={<Home />} />

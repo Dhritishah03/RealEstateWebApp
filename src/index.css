@@ -97,13 +97,11 @@ input{
 
 } */
 nav{
-  margin-right: -40px;
-  margin-left: -40px;
+position: relative;
 display: flex;
 justify-content: space-around;
 align-items: center;
 background-color: #0A347F;
-box-shadow: 5px 10px 30px rgba(104, 184, 230, 0.411);
 }
 nav ul{
 display: flex;
@@ -517,7 +515,7 @@ font-weight: 500;
   transform: translate(-50%,-50%);
   }
   .header-btn{
-      margin-left: 30%;
+      
   }
 .about-model{
   display: none;
@@ -556,13 +554,13 @@ font-weight: 500;
           margin-top: 1000px;
       }
   
-@media(max-width:1100px){.menu-icon{
+@media(min-width:500px){.menu-icon{
   display:block;}
       nav{
-          justify-content: space-between;
+          width: 500px;
           height: 65px;
-          padding: 0px 30px;
-          position: fixed;
+          
+          
       }
       .property{
           background: none;
@@ -576,8 +574,7 @@ font-weight: 500;
       .menu{
           display:none;
           position:absolute;
-          top:65px;
-          left:0px;
+          
           background-color:#FFFFFF;
           border-bottom:4px solid #064757;
           width:100%;
@@ -592,11 +589,12 @@ font-weight: 500;
           height:40px;
           justify-content: center;
           align-items: center;
-          margin:0px;
+          
           padding: 25px;
-          border:1px solid rgba(38,38,38,0.03);
+          border:1px solid rgb(247, 233, 233);
       }
       nav .menu-icon{
+        
           cursor:pointer;
           float:right;
           padding:28px 20px;
@@ -604,7 +602,7 @@ font-weight: 500;
           user-select: none;
       }
       nav .menu-icon .nav-icon{
-          background-color:#333333;
+          background-color:white;
           display:block;
           height:2px;
           position:relative;
@@ -613,7 +611,7 @@ font-weight: 500;
       }
       nav .menu-icon .nav-icon:before,
       nav .menu-icon .nav-icon:after{
-          background:#333;
+          background:white;
           content:'';
           display:block;
           height:100%;
