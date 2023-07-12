@@ -1,25 +1,18 @@
 import React from 'react';
-import a from '../images/a.jpeg'
-import b from '../images/b.jpeg'
-import c from '../images/d.avif'
-import './poster.jpg'
+
 const Poster = () => {
   return (
-    <section className=' bg-[url(https://wallpaperaccess.com/full/1191995.jpg)] bg-cover h-full min-h-[1040px] pt-[50px] mb-8 xl:mb-8'>
+    <section className="pt-[40px] md:pt-[100px] lg:pt-[100px] xl:pt-[130px] mb-8 xl:mb-8">
       <div>
-        <div className='lg:ml-8 xl:ml-[135px]  items-center lg:items-start text-center lg:text-center justify-center flex-1 px-4 lg:px-0'>
-          <h1 className='text-white mt-[150px] ml-[-80px] text-4xl lg:text-[58px] font-semibold leading-none '>
-            Welcome To      <span className='text-cyan-500 break-words'>Real Estate</span>
+        <div className="flex flex-col justify-center items-center text-center lg:text-left px-4 lg:pl-8">
+          <h1 className="text-white mt-8 ml-4 text-3xl md:text-5xl lg:text-4xl xl:text-6xl font-semibold leading-none">
+            Welcome To <span className="text-cyan-500 break-words">Real Estate</span>
           </h1>
-          <p className='ml-[-110px] mt-[10px] mb-[300px] text-white'>
-           We Help You Find Your Dream House
+          <p className="mt-1 mb-16 ml-4 text-white text-sm lg:text-lg md:text-lg xl:text-lg">
+            We Help You Find Your Property
           </p>
         </div>
-        <div className='hidden flex-1 lg:flex justify-end items-end'>
-          <img src={Image} alt='' />
-        </div>
       </div>
-      
     </section>
   );
 };

@@ -45,8 +45,8 @@ const HouseList = () => {
   
 
   return (
-    <section className='mt-[30px] mb-20'>
-      <h1 className='drop-shadow-xl shadow-black text-transparent bg-clip-text bg-gradient-to-r to-cyan-900 from-sky-400 pb-5 pt-5 md:pb-10 md:pt-10 text-4xl md:text-5xl font-extrabold text-center mb-8 md:mb-12'>Our Properties</h1>
+    <section className=' mb-20'>
+      <h1 className='drop-shadow-xl shadow-black text-transparent bg-clip-text bg-gradient-to-r to-cyan-900 from-sky-400 pb-5 pt-5 md:pb-10 md:pt-10 text-3xl xl:text-4xl md:text-5xl font-extrabold text-center mb-8 md:mb-12'>Our Properties</h1>
 
       <div className='container mx-auto'>
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-14'>

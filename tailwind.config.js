@@ -7,8 +7,9 @@ const withMT = require("@material-tailwind/react/utils/withMT");
     },
     container: {
       padding: {
-        DEFAULT: '10rem',
+        
         lg: '6rem',
+        md: '3rem'
       },
     },
     screens: {

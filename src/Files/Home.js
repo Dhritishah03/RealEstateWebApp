@@ -7,7 +7,8 @@ import HouseList from '../Components.js/HouseList';
 const Home = () => {
   return (
     <div className='min-h-[1800px]'>
-      <Poster/>
+      <div className='bg-[url(https://wallpaperaccess.com/full/1191995.jpg)] min-h-[460px] bg-center bg-cover bg-no-repeat md:h-[1000px]'>
+      <Poster/></div>
       <Arrow />
       <HouseList />
     </div>

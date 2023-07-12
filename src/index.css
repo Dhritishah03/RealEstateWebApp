@@ -97,11 +97,12 @@ input{
 
 } */
 nav{
+  width: 100%;
 position: relative;
 display: flex;
 justify-content: space-around;
 align-items: center;
-background-color: #0A347F;
+background-color: #0A3079;
 }
 nav ul{
 display: flex;
@@ -132,6 +133,27 @@ transition: all ease 0.2s;
 nav .menu-btn,
 .menu-icon{
   display:none;
+}
+
+
+.slider-container {
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  position: relative;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* .header-btn{
@@ -553,13 +575,28 @@ font-weight: 500;
       .contact{
           margin-top: 1000px;
       }
-  
-@media(min-width:500px){.menu-icon{
+
+      @media (max-width: 768px) {
+        .bg-cover {
+          background-image: url(https://wallpaperaccess.com/full/1191995.jpg);
+          background-size: cover;
+          background-position: center;
+        }
+      }
+
+
+      @media(max-width:900px){
+        nav{
+width: 100;
+        }
+      }
+@media(max-width:500px){
+  .menu-icon{
   display:block;}
       nav{
-          width: 500px;
-          height: 65px;
-          
+        position: relative;
+        z-index: 1;
+          width: 100%;
           
       }
       .property{
@@ -572,34 +609,47 @@ font-weight: 500;
           width:70px;
       }
       .menu{
-          display:none;
-          position:absolute;
-          
-          background-color:#FFFFFF;
-          border-bottom:4px solid #064757;
-          width:100%;
-          padding:0px;
-          margin:0px;
+        
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        background-color: #ffffff;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+      
+      }
+      .menu.open {
+        justify-content: flex-end;
+        width: 200px;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
       }
       .menu li{
-          width:100%;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
       }
+      /* .menu li:last-child {
+        border-bottom: none;
+      } */
       nav .menu li a{
-          width:100%;
-          height:40px;
-          justify-content: center;
-          align-items: center;
-          
-          padding: 25px;
-          border:1px solid rgb(247, 233, 233);
+        color: #000000;
+        text-decoration: none;
       }
+      
       nav .menu-icon{
         
-          cursor:pointer;
-          float:right;
-          padding:28px 20px;
-          position:relative;
-          user-select: none;
+        position: relative;
+        cursor: pointer;
+        z-index: 2;
       }
       nav .menu-icon .nav-icon{
           background-color:white;
@@ -625,14 +675,14 @@ font-weight: 500;
       nav .menu-icon .nav-icon:after{
           top:-5px;
       }
-      nav .menu-btn:checked ~ .menu-icon .nav-icon{
+      nav .menu-btn:checked + .menu-icon .nav-icon{
           background:transparent;
       }
-      nav .menu-btn:checked ~ .menu-icon .nav-icon:before{
+      nav .menu-btn:checked + .menu-icon .nav-icon:before{
           transform: rotate(-45deg);
           top:0;
       }
-      nav .menu-btn:checked ~ .menu-icon .nav-icon:after{
+      nav .menu-btn:checked + .menu-icon .nav-icon:after{
           transform: rotate(45deg);
           top:0;
       }
@@ -640,7 +690,9 @@ font-weight: 500;
           display:none;
       }
       nav .menu-btn:checked ~ .menu{
-          display:block;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
       }}
       @media(max-width:400px){ 
           .s-box{
