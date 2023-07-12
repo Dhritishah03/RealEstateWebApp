@@ -31,7 +31,7 @@ export default function Navbar() {
           <a href="#">About</a>
         </li>
         <li>
-          <a href="#">Property</a>
+          <Link to="/HouseList">Property</Link>
         </li>
         <li>
           <Link to="/contact">Contact</Link>

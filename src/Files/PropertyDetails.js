@@ -27,7 +27,7 @@ const PropertyDetails = () => {
   }
 
   return (
-    <div className='mt-[100px] container mx-auto min-w-[1300px] min-h-[800px] mb-14'>
+    <div className='mt-[100px] container mx-auto min-w-[1300px] md:w-[500px] min-h-[800px] mb-14'>
       <div>
         <h2 className='mb-3 text-3xl font-semibold'>{house.propertyName}</h2>
 
@@ -41,7 +41,7 @@ const PropertyDetails = () => {
         </div>
       </div>
       <div className='flex gap-x-2 items-center'>
-        <h3 className='text-lg mb-1 '>{house.address}</h3>
+        <h3 className='text-lg mb-1'>{house.address}</h3>
       </div>
       <div className='flex flex-col items-start gap-8 lg:flex-row'>
         <div className='max-w-[768px]'>
@@ -56,19 +56,20 @@ const PropertyDetails = () => {
             <a href={house.mapLocation} className='mb-[50px]'>
               {house.mapLocation}
             </a>
+            
+            
           </div>
-
-          <div>
-            <SimpleImageSlider
-              width={720}
-              height={414}
+          <div className='slider-container'>
+          <SimpleImageSlider
+              width='720px'
+              height='420px'
               images={house.propertyImages}
               showBullets={true}
               showNavs={true}
             />
           </div>
         </div>
-        <div className='flex-1 w-full mb-8 bg-white border border-gray-300 rounded-lg px-6 py-8'>
+        <div className='flex-1 w-[400px] mb-8 bg-white border border-gray-300 rounded-lg px-6 py-8'>
           <div className='flex items-center gap-x-4 mb-8'>
             <div className='w-20 h-20 p-1 border border-gray-300 rounded-full'>
               <img src={house.propertyImages[0]} alt='' />

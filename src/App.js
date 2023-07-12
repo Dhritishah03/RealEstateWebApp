@@ -6,7 +6,7 @@ import Header from './Components.js/Header';
 import PropertyDetails from './Files/PropertyDetails';
 import Contact from './Components.js/Contact';
 import Footer from './Components.js/Footer';
-
+import HouseList from './Components.js/HouseList';
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
     <Header />
     <Routes>
       <Route path='/' element={<Home />} />
+      <Route path='/HouseList' element={<HouseList />} />
       <Route path='/property/:id' element={<PropertyDetails />} />
     </Routes>
     <Contact/>
