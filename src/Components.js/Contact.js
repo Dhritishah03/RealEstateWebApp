@@ -1,33 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
 import a from '../images/a.jpeg';
+import { db } from "../firebaseConfig.js";
 
 export default function Contact() {
-  return (
-    <div className="mt-10 mb-10 flex justify-center">
-      <div className="w-full md:w-1/2">
-        <div>
-          <h1 className="text-blue-600 text-center text-4xl font-semibold mt-10 mb-10">Contact Us</h1>
-        </div>
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
 
-        <div className="flex flex-col md:flex-row justify-center">
-          <form className="w-full md:w-2/3">
-            <div>
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const contactusData = {
+        firstName,
+        lastName,
+        email,
+        phone,
+        message,
+      };
+
+      await db.collection("ContactUsRecord").add(contactusData);
+
+      alert("Information Successfully Added");
+
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+    } catch (error) {
+      console.log("Error creating contact entry:", error);
+      alert("Something went wrong");
+    }
+  };
+
+  return (
+    <div className="mt-[100px] mb-[100px] flex justify-center">
+      <div className="w-1/2">
+        <form onSubmit={handleSubmit}>
+          <div>
+            <h1 className="text-blue-600 text-center text-4xl font-semibold mt-10 mb-10">Contact Us</h1>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="w-2/3">
               <div>
                 <input
                   type="text"
                   name="firstName"
-                  id=""
                   className="bg-slate-200 px-4 pr-20 w-full h-10 my-2 rounded-lg text-black text-base"
                   placeholder="First Name"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                 />
               </div>
               <div>
                 <input
                   type="text"
                   name="lastName"
-                  id=""
                   className="bg-slate-200 px-4 pr-20 w-full h-10 my-2 rounded-lg text-black text-base"
                   placeholder="Last Name"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
                 />
               </div>
 
@@ -35,54 +71,46 @@ export default function Contact() {
                 <input
                   type="number"
                   name="phone"
-                  id=""
                   className="bg-slate-200 px-4 pr-20 w-full h-10 my-2 rounded-lg text-black text-base"
                   placeholder="Phone Number"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
               <div>
                 <input
                   type="email"
                   name="email"
-                  id=""
                   className="bg-slate-200 px-4 pr-20 w-full h-10 my-2 rounded-lg text-black text-base"
                   placeholder="Email ID"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
 
-              <div className="row">
-                <div>
-                  <input
-                    type="text"
-                    name="address"
-                    id=""
-                    className="bg-slate-200 px-4 w-full pr-20 h-10 my-2 rounded-lg text-black text-base"
-                    placeholder="Address"
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div>
-                  <input
-                    className="bg-slate-200 px-4 w-full h-10 my-2 mb-4 rounded-lg text-black text-base"
-                    type="text"
-                    name="message"
-                    id=""
-                    placeholder="Enter your Message"
-                  />
-                </div>
+              <div>
+                <input
+                  type="text"
+                  name="message"
+                  className="bg-slate-200 px-4 w-full h-10 my-2 mb-4 rounded-lg text-black text-base"
+                  placeholder="Enter your Message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
               </div>
 
-              <center>
-                <button className="mt-4 bg-black hover:bg-violet-800 transition w-40 h-12 rounded-lg mb-4 flex items-center justify-center text-white text-lg">
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="mt-[40px] bg-black hover:bg-violet-800 transition w-40 h-12 rounded-lg mb-4 flex items-center justify-center text-white text-lg"
+                >
                   Submit
                 </button>
-              </center>
+              </div>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
-
       <div className="hidden md:flex justify-center items-center">
         <img src={a} alt="Contact Image" className="max-w-full" />
       </div>
