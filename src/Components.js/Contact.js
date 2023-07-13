@@ -13,7 +13,7 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      const contactusData = {
+      const contactData = {
         firstName,
         lastName,
         email,
@@ -21,7 +21,7 @@ export default function Contact() {
         message,
       };
 
-      await db.collection("ContactUsRecord").add(contactusData);
+      await db.collection("ContactUsRecord").add(contactData);
 
       alert("Information Successfully Added");
 
