@@ -27,9 +27,9 @@ export default function Navbar() {
             </a>
           </li>
         </Link>
-        <li>
-          <a href="#">About</a>
-        </li>
+        {/* <li>
+          <Link to="/About">About</Link>
+        </li> */}
         <li>
           <Link to="/HouseList">Property</Link>
         </li>

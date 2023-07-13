@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { db } from '../firebaseConfig';
 import { collection, getDocs } from 'firebase/firestore';
+
+import { HouseContext } from './HouseContext';
+
 import House from './House';
+
 import { Link } from 'react-router-dom';
 
 import { ImSpinner2 } from 'react-icons/im';
 
 const HouseList = () => {
   const [houses, setHouses] = useState([]);
-  const [filter, setFilter] = useState('');
+  const [filteredHouses, setFilteredHouses] = useState([]);
+  const [sortOption, setSortOption] = useState('');
 
   const housesCollectionRef = collection(db, 'PropertyRecord');
 
@@ -22,23 +27,31 @@ const HouseList = () => {
     getHouses();
   }, []);
 
-  const filterHouses = (area) => {
-    setFilter(area);
+  useEffect(() => {
+    const applyFilter = () => {
+      let sortedHouses = [...houses];
+
+      if (sortOption === 'bigToSmall') {
+        sortedHouses.sort((a, b) => b.area - a.area);
+      } else if (sortOption === 'smallToBig') {
+        sortedHouses.sort((a, b) => a.area - b.area);
+      }
+
+      setFilteredHouses(sortedHouses);
+    };
+
+    applyFilter();
+  }, [houses, sortOption]);
+
+  const handleSortChange = (e) => {
+    setSortOption(e.target.value);
   };
 
-  let filteredHouses = houses;
-
-  if (filter === 'big') {
-    filteredHouses = houses.filter((house) => house.area > 2000);
-  } else if (filter === 'medium') {
-    filteredHouses = houses.filter((house) => house.area >= 1000 && house.area <= 2000);
-  } else if (filter === 'small') {
-    filteredHouses = houses.filter((house) => house.area < 1000);
-  }
-
-  if (filteredHouses.length < 1) {
+  if (houses.length < 1) {
     return (
-      <div className="text-center text-3xl text-gray-400 mt-48">Sorry, nothing was found.</div>
+      <div className="text-center text-3xl text-gray-400 mt-48">
+        Sorry, nothing was found.
+      </div>
     );
   }
 
@@ -49,47 +62,30 @@ const HouseList = () => {
       </h1>
 
       <div className="container mx-auto">
-        <div className="flex justify-center mb-6">
-          <button
-            className={`${
-              filter === 'all' ? 'bg-cyan-600' : 'bg-gray-400'
-            } text-white px-4 py-2 rounded mr-2`}
-            onClick={() => filterHouses('all')}
+        <div className="flex items-center justify-end mr-6 mb-4">
+          <label htmlFor="sortOption" className="mr-2 font-medium">
+            Sort By Area:
+          </label>
+          <select
+            id="sortOption"
+            className="px-3 py-1 border border-gray-300 rounded-md outline-none"
+            value={sortOption}
+            onChange={handleSortChange}
           >
-            All
-          </button>
-          <button
-            className={`${
-              filter === 'big' ? 'bg-cyan-600' : 'bg-gray-400'
-            } text-white px-4 py-2 rounded mr-2`}
-            onClick={() => filterHouses('big')}
-          >
-            Big
-          </button>
-          <button
-            className={`${
-              filter === 'medium' ? 'bg-cyan-600' : 'bg-gray-400'
-            } text-white px-4 py-2 rounded mr-2`}
-            onClick={() => filterHouses('medium')}
-          >
-            Medium
-          </button>
-          <button
-            className={`${
-              filter === 'small' ? 'bg-cyan-600' : 'bg-gray-400'
-            } text-white px-4 py-2 rounded`}
-            onClick={() => filterHouses('small')}
-          >
-            Small
-          </button>
+            <option value="">-- Select Option --</option>
+            <option value="bigToSmall">Big to Small</option>
+            <option value="smallToBig">Small to Big</option>
+          </select>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-14">
-          {filteredHouses.map((house, index) => (
-            <Link to={`/property/${house.id}`} key={index}>
-              <House house={house} />
-            </Link>
-          ))}
+          {filteredHouses.map((house, index) => {
+            return (
+              <Link to={`/property/${house.id}`} key={index}>
+                <House house={house} />
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -38,7 +38,7 @@ export default function Contact() {
 
   return (
     <div className="mt-[100px] mb-[100px] flex justify-center">
-      <div className="w-1/2">
+      <div className="w-2/3">
         <form onSubmit={handleSubmit}>
           <div>
             <h1 className="text-blue-600 text-center text-4xl font-semibold mt-10 mb-10">Contact Us</h1>
@@ -102,7 +102,7 @@ export default function Contact() {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="mt-[40px] bg-black hover:bg-violet-800 transition w-40 h-12 rounded-lg mb-4 flex items-center justify-center text-white text-lg"
+                  className="mt-[40px] bg-black hover:bg-blue-800 transition w-40 h-12 rounded-lg mb-4 flex items-center justify-center text-white text-lg"
                 >
                   Submit
                 </button>

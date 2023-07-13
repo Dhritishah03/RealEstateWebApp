@@ -7,7 +7,7 @@ import PropertyDetails from './Files/PropertyDetails';
 import Contact from './Components.js/Contact';
 import Footer from './Components.js/Footer';
 import HouseList from './Components.js/HouseList';
-
+import AboutUs from './Components.js/Aboutus';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/HouseList' element={<HouseList />} />
+      <Route path='/About' element={<AboutUs />} />
       <Route path='/property/:id' element={<PropertyDetails />} />
     </Routes>
     <Contact/>
