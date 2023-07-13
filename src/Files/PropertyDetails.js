@@ -49,9 +49,14 @@ const PropertyDetails = () => {
           </div>
           <div className="w-[400px] mb-4">
             <p className="mb-[5px]">{house.description}</p>
-            <a href={house.mapLocation} className="mb-[50px]" style={{ wordWrap: 'break-word' }}>
+            <a href={house.mapLocation} className="text-cyan-700 underline mb-[50px]" style={{ wordWrap: 'break-word' }}>
               {house.mapLocation}
             </a>
+          </div>
+          <div className="mt-6">
+            <h3 className="text-xl font-semibold mb-2">Contact Details:</h3>
+            <p>Email: {house.email}</p>
+            <p>Phone: {house.phone}</p>
           </div>
         </div>
         <div className="flex justify-center min-h-[500px] ">
