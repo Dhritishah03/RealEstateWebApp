@@ -69,7 +69,7 @@ export default function Contact() {
 
               <div>
                 <input
-                  type="number"
+                  type="text"
                   name="phone"
                   className="bg-slate-200 px-4 pr-20 w-full h-10 my-2 rounded-lg text-black text-base"
                   placeholder="Phone Number"
