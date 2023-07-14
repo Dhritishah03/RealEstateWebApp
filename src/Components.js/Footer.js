@@ -39,7 +39,7 @@ export default function Footer() {
                       Phone Number
                     </h4>
                     <p className="text-base text-body-color">
-                      (+62)81 414 257 9980
+                       9767960074
                     </p>
                   </div>
                 </div>
@@ -59,7 +59,7 @@ export default function Footer() {
                       Email Address
                     </h4>
                     <p className="text-base text-body-color">
-                      info@yourdomain.com
+                      aadyaventurespune@gmail.com
                     </p>
                   </div>
                 </div>

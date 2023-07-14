@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import a from '../images/a.jpeg';
 import { db } from "../firebaseConfig.js";
 
 export default function Contact() {
@@ -112,7 +111,7 @@ export default function Contact() {
         </form>
       </div>
       <div className="hidden md:flex justify-center items-center">
-        <img src={a} alt="Contact Image" className="max-w-full" />
+        <img src="./images/a.jpeg" alt="Contact Image" className="max-w-full" />
       </div>
     </div>
   );
