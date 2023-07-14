@@ -21,7 +21,7 @@ export default function Footer() {
         ></path>
         </svg>
       </a> */}
-      <div className="mb-8 flex w-full max-w-[370px]">
+      {/* <div className="mb-8 flex w-full max-w-[370px]">
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width={24}
@@ -62,7 +62,7 @@ export default function Footer() {
                       aadyaventurespune@gmail.com
                     </p>
                   </div>
-                </div>
+                </div> */}
       {/* <a href="#!" type="button" class="rounded-full border-2 border-black text-black leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
         <svg aria-hidden="true"
         focusable="false"
@@ -148,7 +148,7 @@ export default function Footer() {
        
        
        
-       <p className='pl-10 pr-10 mt-2 font-[20px]'>©Copyright 2023 Aadya Ventures - All rights reserved.</p> 
+       <p className='pl-5 pr-5 mt-2 text-[14px] xl:text-[15px]'>©Copyright 2023 Aadya Ventures - All rights reserved.</p> 
       </div>
       </div>
     </footer>
