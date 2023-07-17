@@ -4,6 +4,8 @@ import { db } from '../firebaseConfig';
 import { useParams } from 'react-router-dom';
 import { BiBed, BiBath, BiArea } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import styles from './ImageSlider.module.css';
+import CustomImageSlider from '../Components.js/Slider';
 import SimpleImageSlider from 'react-simple-image-slider';
 
 const PropertyDetails = () => {
@@ -102,20 +104,9 @@ const PropertyDetails = () => {
 
         </div>
         <div className="flex justify-center min-h-[500px] ">
-        <SimpleImageSlider
-  width="50%"
-  height="60%"
-  images={house.propertyImages}
-  showBullets={true}
-  showNavs={true}
-  style={{
-    '.image-slide img': {
-      objectFit: 'cover',
-      width: '100%',
-      height: '100%',
-    },
-  }}
-/>
+        <div className={styles['slider-container']}>
+            <CustomImageSlider images={house.propertyImages} />
+          </div>
 
         </div>
       </div>
