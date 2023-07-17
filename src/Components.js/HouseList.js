@@ -57,7 +57,7 @@ const HouseList = () => {
 
   return (
     <section className="mb-20">
-      <h1 className="drop-shadow-xl shadow-black text-transparent bg-clip-text bg-gradient-to-r to-indigo-500 from-sky-400 pb-5 pt-5 md:pb-10 md:pt-10 text-3xl xl:text-4xl md:text-5xl font-extrabold text-center mb-8 md:mb-12">
+      <h1 className="drop-shadow-xl shadow-black text-transparent bg-clip-text bg-gradient-to-r to-inblue/50 from-inblue pb-5 pt-5 md:pb-10 md:pt-10 text-3xl xl:text-4xl md:text-5xl font-extrabold text-center mb-8 md:mb-12">
         Our Properties
       </h1>
 

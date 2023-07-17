@@ -55,7 +55,7 @@ code {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
-
+@import "~react-image-gallery/styles/css/image-gallery.css";
 /***fontawesome <script src="https://kit.fontawesome.com/95dc93da07.js"></script> *********/
 
 
@@ -100,6 +100,28 @@ input{
   background-size: cover;
 
 } */
+.home-container-img {
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  text-align: center; /* align the inline(-block) elements horizontally */
+  font: 0/0 a;
+}
+
+
+
+.home-img img {
+  align-self:center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle; /* vertical alignment of the inline element */
+  
+}
 .about-us {
   max-width: 600px;
   margin: 0 auto;

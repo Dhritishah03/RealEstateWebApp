@@ -34,6 +34,7 @@ const withMT = require("@material-tailwind/react/utils/withMT");
       colors: {
         primary: '#101828',
         secondary: '#7F56D9',
+        inblue: '#3E5485',
       },
       boxShadow: {
         1: '0px 4px 30px rgba(0, 0, 0, 0.08)',
