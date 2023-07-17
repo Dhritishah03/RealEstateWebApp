@@ -40,7 +40,7 @@ export default function Contact() {
       <div className="w-2/3">
         <form onSubmit={handleSubmit}>
           <div>
-            <h1 className="text-blue-600 text-center text-4xl font-semibold mt-10 mb-10">Contact Us</h1>
+            <h1 className="text-indigo-500 text-center text-4xl font-semibold mt-10 mb-10">Contact Us</h1>
           </div>
 
           <div className="flex justify-center">
@@ -101,7 +101,7 @@ export default function Contact() {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="mt-[40px] bg-black hover:bg-blue-800 transition w-40 h-12 rounded-lg mb-4 flex items-center justify-center text-white text-lg"
+                  className="mt-[40px] bg-black hover:bg-indigo-700 transition w-40 h-12 rounded-lg mb-4 flex items-center justify-center text-white text-lg"
                 >
                   Submit
                 </button>
@@ -111,7 +111,7 @@ export default function Contact() {
         </form>
       </div>
       <div className="hidden md:flex justify-center items-center">
-        <img src="./images/a.jpeg" alt="Contact Image" className="max-w-full" />
+        <img src="/images/a.jpeg" alt="Contact Image" className="max-w-full" />
       </div>
     </div>
   );

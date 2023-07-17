@@ -48,7 +48,7 @@ const PropertyDetails = () => {
             <div className="text-lg text-xl">{house.area} sq feet</div>
           </div>
           <div className="w-[400px] mt-6 mb-4">
-            <p className="mb-[5px]">{house.description}</p>
+          <p className="mb-[5px] whitespace-pre-line">{house.description}</p>
             <a href={house.mapLocation} className="text-cyan-700 underline mb-[50px]" style={{ wordWrap: 'break-word' }}>
               {house.mapLocation}
             </a>
@@ -102,13 +102,21 @@ const PropertyDetails = () => {
 
         </div>
         <div className="flex justify-center min-h-[500px] ">
-          <SimpleImageSlider
-            width="50%"
-            height="60%"
-            images={house.propertyImages}
-            showBullets={true}
-            showNavs={true}
-          />
+        <SimpleImageSlider
+  width="50%"
+  height="60%"
+  images={house.propertyImages}
+  showBullets={true}
+  showNavs={true}
+  style={{
+    '.image-slide img': {
+      objectFit: 'cover',
+      width: '100%',
+      height: '100%',
+    },
+  }}
+/>
+
         </div>
       </div>
     </div></div>

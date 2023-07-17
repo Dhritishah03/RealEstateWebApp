@@ -147,8 +147,9 @@ position: relative;
 display: flex;
 justify-content: space-around;
 align-items: center;
-background-color: #0A3079;
+background-color: #3E5485;
 }
+
 nav ul{
 display: flex;
 }
@@ -170,27 +171,29 @@ color:white;
 
 nav ul li a:hover{
 background-color: black;
-
 color:white;
 box-shadow: 5px 10px 30px rgba(64, 149, 198, 0.411);
 transition: all ease 0.2s;
 }
+
 nav .menu-btn,
 .menu-icon{
   display:none;
 }
 
 
+
+
 /* ResponsiveImageSlider.css */
 
-.slider-container {
+/* .slider-container {
  
 }
 
-/* Media queries for different screen sizes */
+
 @media (max-width: 767px) {
   .slider-container {
-     /* Adjust the height for smaller screens */
+     
   }
 }
 
@@ -198,7 +201,7 @@ nav .menu-btn,
   .slider-container {
     
   }
-}
+} */
 
 /* Add more media queries as needed for different screen sizes */
 
@@ -625,7 +628,7 @@ font-weight: 500;
 
       @media (max-width: 768px) {
         .bg-cover {
-          background-image: url(https://wallpaperaccess.com/full/1191995.jpg);
+          background-image: url(https://wallpaperaccess.com/full/104193.jpg);
           background-size: cover;
           background-position: center;
         }
